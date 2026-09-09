@@ -1,5 +1,3 @@
-package maratonajava.rdates.test;
-
 import java.util.Date;
 
 public class DateTest01 {
