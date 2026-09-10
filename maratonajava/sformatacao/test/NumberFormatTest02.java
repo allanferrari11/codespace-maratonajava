@@ -2,7 +2,7 @@
 // import java.text.ParseException;
 // import java.util.Locale;
 
-// public class NumberFormatTest01 {
+// public class NumberFormatTest02 {
 //     public static void main(String[] args) {
 
 //         Locale localeDefault = Locale.getDefault();
@@ -11,22 +11,22 @@
 //         Locale localeIT = Locale.ITALY;
 
 //         NumberFormat[] nfa = new NumberFormat[4];
-//         nfa[0] = NumberFormat.getInstance();
-//         nfa[1] = NumberFormat.getInstance(localeJP);
-//         nfa[2] = NumberFormat.getInstance(localeBR);
-//         nfa[3] = NumberFormat.getInstance(localeIT);
+//         nfa[0] = NumberFormat.getCurrencyInstance();
+//         nfa[1] = NumberFormat.getCurrencyInstance(localeJP);
+//         nfa[2] = NumberFormat.getCurrencyInstance(localeBR);
+//         nfa[3] = NumberFormat.getCurrencyInstance(localeIT);
 
-//         double valor = 10_000.2130;
+//         double valor = 1000.2130;
 
 //         for (NumberFormat numberFormat : nfa) {
-//             System.out.println(numberFormat.getMaximumFractionDigits());
+//             numberFormat.setMaximumFractionDigits(2);
 //             System.out.println(numberFormat.format(valor));
 //         }
 
-//         String valorString = "1_000.2130";
+//         String valorString = "¤1,000.21";
 
 //         try {
-//             System.out.println("Teste Parse: "+nfa[0].parse(valorString));
+//             System.out.println("Teste Parse: " + nfa[0].parse(valorString));
 //         } catch (ParseException e) {
 //             e.printStackTrace();
 //             System.out.println(" Erro: " + e.getMessage());
